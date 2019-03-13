@@ -34,7 +34,7 @@ class ViewDocument extends React.Component {
               twitter="clvrbgl"
             />
             <React.Fragment>
-              <h1>{data.document && data.document.title}</h1>
+              <h1 data-test="documentTitle">{data.document && data.document.title}</h1>
               <DocumentBody
                 dangerouslySetInnerHTML={{
                   __html: parseMarkdown(data.document && data.document.body),

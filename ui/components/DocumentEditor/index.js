@@ -99,6 +99,7 @@ class DocumentEditor extends React.Component {
                 )}
               </p>
               <DropdownButton
+                data-test="documentSettingsButton"
                 bsStyle="default"
                 title={
                   <span>
@@ -107,7 +108,10 @@ class DocumentEditor extends React.Component {
                 }
                 id="set-document-public"
               >
-                <MenuItem onClick={() => history.push(`/documents/${doc._id}`)}>
+                <MenuItem
+                  data-test="viewDocumentButton"
+                  onClick={() => history.push(`/documents/${doc._id}`)}
+                >
                   <Icon iconStyle="solid" icon="external-link-alt" /> View Document
                 </MenuItem>
                 <MenuItem divider />
@@ -137,6 +141,7 @@ class DocumentEditor extends React.Component {
                 <DocumentEditorTitle>
                   <ControlLabel>Title</ControlLabel>
                   <input
+                    data-test="documentTitle"
                     type="text"
                     className="form-control"
                     name="title"
